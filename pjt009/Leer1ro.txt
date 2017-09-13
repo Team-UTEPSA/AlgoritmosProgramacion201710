@@ -9,4 +9,6 @@ INTRUCCIONES DE USO
        java Main
 1.4. Interactuar con el programa según las preguntas que haga
 
+NOTA:
+- Antes de hace un Commit, debe eliminar todos los archivos bycode .class
 
