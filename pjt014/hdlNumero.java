@@ -1,21 +1,21 @@
 public class hdlNumero {
+    private static clsNumero objNum = new clsNumero();  //Creamos un objeto Número
+
     public void hdlNumero(){
     }
 
     //Implementación de los Métodos que manipularan los objetos e intancias de la clase Número
     //Negocio (controladores)
 
-    public static void probarClaseNumero (int num){
-        int iNum;
+    public static void probarCargarNumero (int num){
+        objNum.setNumero(num);
+    }
 
-        clsNumero objNum = new clsNumero();  //Creamos un objeto Número
+    public static void probarMostrarNumero (){
+        int iNum = objNum.getNumero();
 
-        objNum.setNumero(num);  //Asignamos el valor al atributo número
-
-        iNum = objNum.getNumero();  //Obtenemos el valor del atributo número
-
-        System.out.println("El el valor del objNum es: " + iNum);  //Mostramos el valor del atributo número
-        System.out.print("");  //crea un salto de linea
+        System.out.println("El el valor del objNum es: " + iNum);
+        System.out.print("");
     }
 
 
