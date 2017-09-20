@@ -28,7 +28,83 @@ public class clsNumero {
             num = num / 10;
             k++;
         }
+        return k;
+    }
 
+
+    public boolean NumeroPar (int num) {
+        return (num % 2 == 0);
+    }
+
+
+    public void getDigitosPares (){
+        int num;
+        int dig;
+
+        num = this.numero;
+
+        while (num>0){
+            dig = num % 10;
+            num = num / 10;
+
+            if (NumeroPar(dig)){
+                System.out.print(dig);
+            }
+        }
+    }
+
+
+    public void getDigitosImpares (){
+        int num;
+        int dig;
+
+        num = this.numero;
+
+        while (num>0){
+            dig = num % 10;
+            num = num / 10;
+
+            if (!NumeroPar(dig)){
+                System.out.print(dig);
+            }
+        }
+    }
+
+
+    public byte getCantidadDigitosPares (){
+        int num;
+        int dig;
+        byte k = 0;
+
+        num = this.numero;
+
+        while (num>0){
+            dig = num % 10;
+            num = num / 10;
+
+            if (NumeroPar(dig)){
+                k++;
+            }
+        }
+        return k;
+    }
+
+
+    public byte getCantidadDigitosImpares (){
+        int num;
+        int dig;
+        byte k = 0;
+
+        num = this.numero;
+
+        while (num>0){
+            dig = num % 10;
+            num = num / 10;
+
+            if (!NumeroPar(dig)){
+                k++;
+            }
+        }
         return k;
     }
 
@@ -48,9 +124,10 @@ public class clsNumero {
                 return r;
             }
         }
-
         return -1;
     }
+
+
 
 
 }
