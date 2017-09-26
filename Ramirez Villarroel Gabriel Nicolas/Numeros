@@ -1,0 +1,36 @@
+
+
+METODOS DE NUMEROS
+
+
+insertar un numero (num, pos)
+eliminar un numero (num, pos)
+eliminar un numero (num)
+intercambiar numero (pos1, pos2)
+contar digitos pares ()
+contar digito impares ()
+get digitos primos ()
+sumar digitos ()
+es binario ()
+paridad par () ...................
+paridad impar () ................digito por digito en kla transminicion de datos
+eliminar posicion (pos)
+reemplazar digito (pos, dig)
+suma binaria (num1, num2)
+resta binaria (num1, num2)
+multiplicacion binaria (num1, num2)
+divicion binaria (num1, num2)
+potenica N ()
+raiz ()
+numero digitos ()
+ordenar digitos ASC
+ordenar digitos DES
+
+
+ejemplos
+
+get Posicion (pos)
+
+   (del 1 al 3)t1 = get pos(3)
+   (del 3 al 2)t2 = get pos(7)
+   	       t3 = 
