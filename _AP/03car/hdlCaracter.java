@@ -21,4 +21,44 @@ public class hdlCaracter {
     }
 
 
+    public static void EsMayuscula(){
+        if(objCar.Mayuscula()){
+            System.out.print("El caracter " + objCar.getCaracter() + " es Mayuscula");
+        }else{
+            System.out.print("El caracter " + objCar.getCaracter() + "  NO es Mayuscula");
+        }
+    }
+
+
+    public static void EsMinuscula(){
+        if(objCar.Minuscula()){
+            System.out.print("El caracter " + objCar.getCaracter() + " es minuscula");
+        }else{
+            System.out.print("El caracter " + objCar.getCaracter() + "  NO es minuscula");
+        }
+    }
+
+
+    public static void EsLetra(){
+        if(objCar.Letra()){
+            System.out.print("El caracter " + objCar.getCaracter() + " es Letra");
+        }else{
+            System.out.print("El caracter " + objCar.getCaracter() + "  NO es Letra");
+        }
+    }
+
+
+   public static void EsDigito(){
+        if(objCar.Digito()){
+            System.out.print("El caracter " + objCar.getCaracter() + " es Digito");
+        }else{
+            System.out.print("El caracter " + objCar.getCaracter() + "  NO es Digito");
+        }
+   }
+
+
+
+
+
+
 }

@@ -15,16 +15,23 @@ class Main {
 
         System.out.print("\t[A] Cargar\n");
         System.out.print("\t[B] Mostrar\n");
-        System.out.print("\t[C] XXX\n");
-        System.out.print("\t[D] XXX\n");
-        System.out.print("\t[E] XXX\n");
-        System.out.print("\t[F] XXX\n");
+        System.out.print("\t[C] Mayuscula\n");
+        System.out.print("\t[D] Minuscula\n");
+        System.out.print("\t[E] Letra\n");
+        System.out.print("\t[F] Digito\n");
         System.out.print("\t[G] XXX\n");
         System.out.print("\t[H] XXX\n");
         System.out.print("\t[I] XXX\n");
+        System.out.print("\t[J] XXX\n");
+        System.out.print("\t[K] XXX\n");
+        System.out.print("\t[L] XXX\n");
+        System.out.print("\t[M] XXX\n");
+        System.out.print("\t[N] XXX\n");
+        System.out.print("\t[O] XXX\n");
+        System.out.print("\t[P] XXX\n");
+        System.out.print("\t[Q] XXX\n");
 
         System.out.print("\t[S] Salir\n");
-
         System.out.print("\n");
     }
 
@@ -48,19 +55,18 @@ class Main {
                 break;
             case 'B':
                 hdlCar.MostrarCaracter();
-                System.out.print("\n");
                 break;
             case 'C':
-                //hdlCar.();
+                hdlCar.EsMayuscula();
                 break;
             case 'D':
-                //hdlCar.();
+                hdlCar.EsMinuscula();
                 break;
             case 'E':
-                //hdlCar.();
+                hdlCar.EsLetra();
                 break;
             case 'F':
-                //hdlCar.();
+                hdlCar.EsDigito();
                 break;
             case 'G':
                 //hdlCar.();
@@ -80,11 +86,11 @@ class Main {
                 System.exit(0);
                 break;
             default:
-                System.out.print("ERROR:: Opción no disponible...");
+                System.out.print("ERROR:: Opción no disponible...\n");
                 break;
         }
 
-        System.out.print("\n");
+        System.out.print("\n\n");
         cOpcion = get_opcion("[S] Salir: ");
         main(null);
     }
