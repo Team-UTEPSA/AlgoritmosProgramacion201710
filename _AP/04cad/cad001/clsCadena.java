@@ -25,4 +25,22 @@ public class clsCadena {
         return this.dimension;
     }
 
+
+    public void PrimeraLetraMayuscula(){
+        System.out.println("hola");
+    }
+
+    public int CantidadPalabras(){
+        return 0;
+    }
+
+
+    public void RemplazarPalabra(String pal){
+        System.out.println("hola");
+    }
+
+
+
+
+
 }

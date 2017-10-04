@@ -22,9 +22,16 @@ class Main {
         System.out.print("\t[G] XXX\n");
         System.out.print("\t[H] XXX\n");
         System.out.print("\t[I] XXX\n");
+        System.out.print("\t[J] XXX\n");
+        System.out.print("\t[K] XXX\n");
+        System.out.print("\t[L] XXX\n");
+        System.out.print("\t[M] XXX\n");
+        System.out.print("\t[N] XXX\n");
+        System.out.print("\t[O] XXX\n");
+        System.out.print("\t[P] XXX\n");
+        System.out.print("\t[Q] XXX\n");
 
         System.out.print("\t[S] Salir\n");
-
         System.out.print("\n");
     }
 
@@ -38,7 +45,8 @@ class Main {
     public static void elegir_opcion (){
         String sCad;
 
-        char cOpcion = get_letra("Elija una opción: ");
+        char cOpcion = get_opcion("Elija una opción: ");
+        System.out.print("\n");
 
         switch(cOpcion){
             case 'A':
@@ -69,7 +77,15 @@ class Main {
             case 'I':
                 //hdlCad.();
                 break;
-
+            case 'J':
+                //hdlCad.();
+                break;
+            case 'K':
+                //hdlCad.();
+                break;
+            case 'L':
+                //hdlCad.();
+                break;
 
 
 
@@ -78,32 +94,31 @@ class Main {
                 System.exit(0);
                 break;
             default:
-                System.out.print("ERROR:: Opción no disponible...");
+                System.out.print("ERROR:: Opción no disponible...\n");
                 break;
         }
 
-        System.out.print("\n");
-        java.util.Scanner entrada = new java.util.Scanner(System.in);
-        String sEntrada = entrada.next();
+        System.out.print("\n\n");
+        cOpcion = get_opcion("[S] Salir: ");
         main(null);
     }
 
 
     public static String get_string (String msg){
-        java.util.Scanner sCadena = new java.util.Scanner(System.in);
+        java.util.Scanner entrada = new java.util.Scanner(System.in);
         System.out.print(msg);
-        String sCad = sCadena.nextLine();
+        String sCad = entrada.nextLine();
 
         return sCad;
     }
 
 
-    public static char get_letra (String msg){
+    public static char get_opcion (String msg){
         char cChar;
         do{
-            java.util.Scanner TextEscanner = new java.util.Scanner(System.in);
+            java.util.Scanner entrada = new java.util.Scanner(System.in);
             System.out.print(msg);
-            String sEntrada = TextEscanner.next();
+            String sEntrada = entrada.next();
             sEntrada = sEntrada.toUpperCase();
             cChar = sEntrada.charAt(0);
         }while((int)cChar<65 || (int)cChar>90);
@@ -112,6 +127,17 @@ class Main {
     }
 
 
+    public static char get_char (String msg){
+        char cChar;
+        do{
+            java.util.Scanner entrada = new java.util.Scanner(System.in);
+            System.out.print(msg);
+            String sEntrada = entrada.next();
+            cChar = sEntrada.charAt(0);
+        }while((int)cChar<0 || (int)cChar>127);
+
+        return cChar;
+    }
 
 
 }
