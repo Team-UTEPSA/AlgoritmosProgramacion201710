@@ -6,18 +6,15 @@ import java.util.Arrays;
 public class clsCadena {
     //Atributos de la clase Cadena
     private String cadena;
-    private int dimension;
 
     //Método Procedimiento: Constructor de la clase Cadena
     public void clsCadena(){
         this.cadena = "";
-        this.dimension = 0;
     }
 
     //Método Procedimiento: Asignar un valor al atributo Cadena
     public void setCadena(String cad){
         this.cadena = cad;
-        this.dimension = cad.length();
     }
 
     //Método Función: Devolver el valor del atributo Cadena
@@ -27,7 +24,7 @@ public class clsCadena {
 
     //Método Función: Devolver el valor del atributo Cadena
     public int getDimension(){
-        return this.dimension;
+        return this.cadena.length();
     }
 
 
@@ -85,7 +82,7 @@ public class clsCadena {
             }else if(i>0){
                 carBack = this.cadena.charAt(i-1);
                 objCarBack.setCaracter(carBack);
-                if (objCarBack.Espacio()){
+                if (objCarBack.Espacio() && !objCar.Espacio()){
                     objCar.aMayuscula();
                 }
             }
