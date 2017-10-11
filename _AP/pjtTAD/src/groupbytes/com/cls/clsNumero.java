@@ -219,6 +219,24 @@ public class clsNumero {
     }
 
 
+    public byte DigitoMayor(){
+        long num = this.numero;
+        byte d = (byte)(num % 10);
+        num = num / 10;
+        byte dmy = d;
+
+        while (num >0){
+            d = (byte)(num % 10);
+            num = num / 10;
+
+            if(d>dmy)
+                dmy = d;
+        }
+
+        return dmy;
+    }
+
+
     public float PromedioDigitosImpares(){
         float pm = 0;
 
@@ -279,23 +297,6 @@ public class clsNumero {
     }
 
 
-    //Metodo: Por probar
-    public byte DigitoMayor(){
-        long num = this.numero;
-        byte d = (byte)(num % 10);
-        num = num / 10;
-        byte dmy = d;
-
-        while (num >0){
-            d = (byte)(num % 10);
-            num = num / 10;
-
-            if(d>dmy)
-                dmy = d;
-        }
-
-        return dmy;
-    }
 
 
     //programandose

@@ -24,11 +24,11 @@ public class cuiCadena {
         System.out.print("\t[D] Convertir en Mayúscula\n");
         System.out.print("\t[E] Convertir en Minúscula\n");
         System.out.print("\t[F] Primera Letra en Mayúscula\n");
-        System.out.print("\t[G] XXX\n");
-        System.out.print("\t[H] XXX\n");
-        System.out.print("\t[I] XXX\n");
-        System.out.print("\t[J] XXX\n");
-        System.out.print("\t[K] XXX\n");
+        System.out.print("\t[G] Cantidad de Palabras\n");
+        System.out.print("\t[H] Listar\n");
+        System.out.print("\t[I] Palabras a un Espacio\n");
+        System.out.print("\t[J] Buscar\n");
+        System.out.print("\t[K] Eliminar N Caracteres\n");
         System.out.print("\t[L] XXX\n");
         System.out.print("\t[M] XXX\n");
         System.out.print("\t[N] XXX\n");
@@ -68,19 +68,22 @@ public class cuiCadena {
                 hdlCad.ConvertirPrimeraLetraMayuscula();
                 break;
             case 'G':
-                //hdlCad.();
+                hdlCad.MostrarCantidadPalabras();
                 break;
             case 'H':
-                //hdlCad.();
+                hdlCad.ListarPalabras();
                 break;
             case 'I':
-                //hdlCad.();
+                hdlCad.PalabrasConUnEspacio();
                 break;
             case 'J':
-                //hdlCad.();
+                sCad = mUtil.get_String("Introduzca la palabra a buscar: ");
+                hdlCad.EstaLaPalabra(sCad);
                 break;
             case 'K':
-                //hdlCad.();
+                int pos = mUtil.get_Int("Escriba la posicion: ");
+                int nCar = mUtil.get_Int("Numero de caracteres a eliminar: ");
+                hdlCad.EliminarNCaracteres(pos, nCar);
                 break;
             case 'L':
                 //hdlCad.();

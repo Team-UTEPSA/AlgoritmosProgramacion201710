@@ -21,7 +21,7 @@ public class hdlCadena {
 
 
     public static void MostrarDimension(){
-        int iDim = objCad.getDimension();
+        int iDim = objCad.Longitud();
         System.out.print("El el valor de la cadena es: " + iDim);
     }
 
@@ -43,6 +43,41 @@ public class hdlCadena {
         System.out.print("Ejecutado...");
     }
 
+    public static void MostrarCantidadPalabras(){
+        int cPal = objCad.CantidadPalabras();
+        System.out.print("La cadena " + objCad.getCadena() + " tiene " + cPal + " palabras");
+    }
+
+
+    public static void ListarPalabras(){
+        String [] lstCad = objCad.aVector();
+        int k = lstCad.length;
+
+        for (int i=0; i<k; i++){
+            System.out.println("La cadena [" + i + "] = " + lstCad[i]);
+        }
+    }
+
+
+    public static void PalabrasConUnEspacio(){
+        objCad.UnEspacio();
+        System.out.print("La cadena en un espacio es: " + objCad.getCadena());
+    }
+
+
+    public static void EstaLaPalabra(String pal){
+        if (objCad.Existe(pal)){
+            System.out.println("La palabra " + pal + " esta en la cadena " + objCad.getCadena());
+        }else{
+            System.out.println("La palabra " + pal + " NO esta en la cadena " + objCad.getCadena());
+        }
+    }
+
+
+    public static void EliminarNCaracteres(int pos, int nCar){
+        objCad.EliminarCaracteres(pos, nCar);
+        System.out.print("Ejecutado...");
+    }
 
 
 }

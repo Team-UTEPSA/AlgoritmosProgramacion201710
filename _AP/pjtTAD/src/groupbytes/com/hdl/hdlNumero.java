@@ -59,6 +59,13 @@ public class hdlNumero {
     }
 
 
+    public static void MostrarDigitoMayor (){
+        byte my = objNum.DigitoMayor();
+        System.out.print("El dígito mayor de " + objNum.getNumero() + " es: " + my);
+    }
+
+
+
 
 
 }

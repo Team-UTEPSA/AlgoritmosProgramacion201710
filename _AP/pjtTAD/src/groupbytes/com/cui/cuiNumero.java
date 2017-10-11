@@ -27,6 +27,8 @@ public class cuiNumero {
         System.out.print("\t[G] Cantidad dígitos impares\n");
         System.out.print("\t[H] Teorema de la numeración\n");
         System.out.print("\t[I] Posición a consultar\n");
+        System.out.print("\t[J] Digito mayor\n");
+
 
         System.out.print("\t[S] Salir\n");
 
@@ -70,7 +72,9 @@ public class cuiNumero {
                 byte yPos = mUtil.get_Byte("Introduzca la posición a consultar: ");
                 objNumero.MostrarDigitoPosicion(yPos);
                 break;
-
+            case 'J':
+                objNumero.MostrarDigitoMayor();
+                break;
 
 
 

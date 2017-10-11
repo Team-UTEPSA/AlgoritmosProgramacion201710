@@ -57,6 +57,11 @@ public class clsCaracter {
     }
 
 
+    public boolean FinDeCadena(){
+        return (byte)this.caracter==(byte) '\0';
+    }
+
+
     public byte ASCII(){
         return (byte)this.caracter;
     }
