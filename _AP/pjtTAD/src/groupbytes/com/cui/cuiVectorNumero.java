@@ -1,10 +1,10 @@
 package groupbytes.com.cui;
 
-import groupbytes.com.hdl.hdlVector;
+import groupbytes.com.hdl.hdlVectorNumero;
 
-public class cuiVector {
+public class cuiVectorNumero {
     private  static clsUtils mUtil = new clsUtils();
-    private static hdlVector hdlVec = new hdlVector();
+    private static hdlVectorNumero hdlVec = new hdlVectorNumero();
 
     //Implementación del procedimiento principal MAIN
     //Interfaz del Usuario (runner)
@@ -25,7 +25,7 @@ public class cuiVector {
         System.out.print("\t[E] Obtener un elemento\n");
         System.out.print("\t[F] Obtener todos los elementos\n");
         System.out.print("\t[G] Numero de elementos\n");
-        System.out.print("\t[H] XXXX\n");
+        System.out.print("\t[H] Vector binario\n");
         System.out.print("\t[I] XXXX\n");
         System.out.print("\t[J] XXXX\n");
         System.out.print("\t[K] XXXX\n");
@@ -59,7 +59,10 @@ public class cuiVector {
                 hdlVec.CargarElemento(iNum);
                 break;
             case 'D':
-                //hdlVec.();
+                long[] vec;
+
+
+                //hdlVec.CargarElementos(vec);
                 break;
             case 'E':
                 int iPos = mUtil.get_Int("Posicion a consultar: ");
@@ -72,7 +75,7 @@ public class cuiVector {
                 hdlVec.CantidadElementos();
                 break;
             case 'H':
-                //hdlVec.();
+                //hdlVec.PruebaBinaria();
                 break;
             case 'I':
                 //hdlVec.();

@@ -1,9 +1,9 @@
 package groupbytes.com.hdl;
 
-import groupbytes.com.cls.clsVector;
+import groupbytes.com.cls.clsVectorNumero;
 
-public class hdlVector {
-    private static clsVector objVec = new clsVector();
+public class hdlVectorNumero {
+    private static clsVectorNumero objVec = new clsVectorNumero();
 
 
     //Implementación de los Métodos que manipularan los objetos e intancias de la clase Vector

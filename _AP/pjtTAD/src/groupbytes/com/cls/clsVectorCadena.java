@@ -1,53 +1,52 @@
 package groupbytes.com.cls;
 
-public class clsVector {
+public class clsVectorCadena {
     //Atributos de la clase Vector
-    clsNumero[] vector;
+    clsCadena[] vector;
     int maxDim;
     int dimension;
 
 
     //Método Procedimiento: Constructor de la clase Vector
-    public void clsVector(int max){
+    public void clsVectorCadena(int max){
         this.maxDim = max;
         this.dimension = -1;
-        vector = new clsNumero[max];
+        this.vector = new clsCadena[max];
 
         for(int i=0; i<max; i++){
-            vector[i] = new clsNumero();
+            this.vector[i] = new clsCadena();
         }
     }
 
-
+/**
     public void CargarRandomico(int max){
-        vector = new clsNumero[max];
+        //this.vector = new clsNumero[max];
         long numRandom;
         long numMin = 0;
         long numMax = 1000;
 
-        clsVector(max);
+        clsVectorCadena(max);
 
         for(int i=0; i<max; i++){
-            //vector[i] = new clsNumero();
             numRandom = numMin + (long)(Math.random() * numMax);
-            vector[i].setNumero(numRandom);
-            System.out.println("(cls) Vector [" + i + "] = " + vector[i].getNumero());
+            this.vector[i].setNumero(numRandom);
+            //System.out.println("(cls) Vector [" + i + "] = " + this.vector[i].getNumero());
         }
         this.maxDim = max;
         this.dimension = max - 1;
     }
-
+**/
 
     //Método Procedimiento: Asignar un valor al atributo Vector
-    public void addElemento(long num){
-        if(dimension+1<maxDim){
-            dimension++;
-            vector[dimension].setNumero(num);
+    public void addElemento(String str){
+        if(this.dimension+1<maxDim){
+            this.dimension++;
+            this.vector[this.dimension].setCadena(str);
         }
     }
 
 
-    public void addElementos(long[] vec){
+    public void addElementos(String[] vec){
         int dim = vec.length;
 
         for(int i=0; i<dim; i++){
@@ -57,19 +56,19 @@ public class clsVector {
 
 
     //Método Función: Devolver el valor del atributo Vector
-    public long getElemento(int pos){
+    public String getElemento(int pos){
         if(pos<=this.dimension){
-            return vector[pos].getNumero();
+            return this.vector[pos].getCadena();
         }
-        return -1;
+        return "";
     }
 
 
-    public long[] getElementos(){
-        long[] ele = new long[this.dimension];
+    public String[] getElementos(){
+        String[] ele = new String[this.dimension];
 
         for(int i=0; i<this.dimension; i++){
-            ele[i] = vector[i].getNumero();
+            ele[i] = this.vector[i].getCadena();
         }
         return ele;
     }
@@ -78,6 +77,9 @@ public class clsVector {
     public int Dimension(){
         return this.dimension + 1;
     }
+
+
+
 
 
 

@@ -8,47 +8,47 @@ public class clsUtils {
     }
 
 
-    public static long get_Long (String cad){
+    public static long get_Long (String msg){
         java.util.Scanner entrada = new java.util.Scanner(System.in);
-        System.out.print(cad);
+        System.out.print(msg);
         long iNum = entrada.nextLong();
 
         return iNum;
     }
 
 
-    public static int get_Int (String cad){
+    public static int get_Int (String msg){
         java.util.Scanner entrada = new java.util.Scanner(System.in);
-        System.out.print(cad);
+        System.out.print(msg);
         int iNum = entrada.nextInt();
 
         return iNum;
     }
 
 
-    public static byte get_Byte (String cad){
+    public static byte get_Byte (String msg){
         java.util.Scanner entrada = new java.util.Scanner(System.in);
-        System.out.print(cad);
+        System.out.print(msg);
         byte yNum = entrada.nextByte();
 
         return yNum;
     }
 
 
-    public static String get_String (String cad){
+    public static String get_String (String msg){
         java.util.Scanner entrada = new java.util.Scanner(System.in);
-        System.out.print(cad);
+        System.out.print(msg);
         String sCad = entrada.nextLine();
 
         return sCad;
     }
 
 
-    public static char get_Char (String cad){
+    public static char get_Char (String msg){
         char cChar;
         do{
             java.util.Scanner entrada = new java.util.Scanner(System.in);
-            System.out.print(cad);
+            System.out.print(msg);
             String sEntrada = entrada.next();
             cChar = sEntrada.charAt(0);
         }while((int)cChar<0 || (int)cChar>127);
@@ -57,11 +57,11 @@ public class clsUtils {
     }
 
 
-    public static char get_Opcion (String cad){
+    public static char get_Opcion (String msg){
         char cChar;
         do{
             java.util.Scanner entrada = new java.util.Scanner(System.in);
-            System.out.print(cad);
+            System.out.print(msg);
             String sEntrada = entrada.next();
             sEntrada = sEntrada.toUpperCase();
             cChar = sEntrada.charAt(0);
@@ -71,11 +71,11 @@ public class clsUtils {
     }
 
 
-    public static char get_Letra (String cad){
+    public static char get_Letra (String msg){
         char cChar;
         do{
             java.util.Scanner TextEscanner = new java.util.Scanner(System.in);
-            System.out.print(cad);
+            System.out.print(msg);
             String sEntrada = TextEscanner.next();
             sEntrada = sEntrada.toUpperCase();
             cChar = sEntrada.charAt(0);
