@@ -12,10 +12,10 @@ public class clsNumero {
 
     //Método Procedimiento: Asignar un valor al atributo número
     public void setNumero(long n){
-        if(n>0 && n<=2147483647)
+        if(n>0 && n<=9223372036854775807L)
             this.numero = n;
         else
-            System.out.print("El número " + n + " está fuera de rango [0;2147483647]");
+            System.out.print("El número " + n + " está fuera de rango [0;9223372036854775807]");
     }
 
     //Método Función: Devolver el valor del atributo número
@@ -24,7 +24,7 @@ public class clsNumero {
     }
 
 
-    public byte getCantidadDigitos(){
+    public byte CantidadDigitos(){
         long num = this.numero;
         byte k = 0;
 
@@ -36,12 +36,29 @@ public class clsNumero {
     }
 
 
+    public byte Cantidad (byte dig){
+        long num = this.numero;
+        byte d;
+        byte c = 0;
+
+        while (num>0){
+            d = (byte)(num % 10);
+
+            if (d==dig){
+                c++;
+            }
+            num = num / 10;
+        }
+        return c;
+    }
+
+
     public boolean NumeroPar (long num) {
         return (num % 2 == 0);
     }
 
 
-    public void getDigitosPares (){
+    public void showDigitosPares (){
         long num = this.numero;
         long dig;
 
@@ -56,7 +73,7 @@ public class clsNumero {
     }
 
 
-    public void getDigitosImpares (){
+    public void showDigitosImpares (){
         long num = this.numero;
         long dig;
 
@@ -73,14 +90,14 @@ public class clsNumero {
 
     public byte CantidadDigitosPares (){
         long num = this.numero;
-        long dig;
+        byte d;
         byte k = 0;
 
         while (num>0){
-            dig = num % 10;
+            d = (byte)(num % 10);
             num = num / 10;
 
-            if (NumeroPar(dig)){
+            if (NumeroPar(d)){
                 k++;
             }
         }
@@ -90,16 +107,16 @@ public class clsNumero {
 
     public byte CantidadDigitosImpares (){
         long num;
-        long dig;
+        byte d;
         byte k = 0;
 
         num = this.numero;
 
         while (num>0){
-            dig = num % 10;
+            d = (byte)(num % 10);
             num = num / 10;
 
-            if (!NumeroPar(dig)){
+            if (!NumeroPar(d)){
                 k++;
             }
         }
@@ -129,14 +146,14 @@ public class clsNumero {
     public void TeoremaNumeracion(){
         long num = this.numero;
         byte d;
-        long k = 0;
+        byte k = 0;
         long s = 0;
 
         while (num>0){
             d = (byte)(num % 10);
             num = num / 10;
-            s = s + d * Potencia(10,k);
-            System.out.println(d * Potencia(10,k));
+            s = s + d * Potencia((byte) 10, k);
+            System.out.println(d * Potencia((byte) 10, k));
             k++;
         }
     }
@@ -167,17 +184,17 @@ public class clsNumero {
         return (long) Math.pow(b, e);
     }
 
-
-    private long PotenciaN(int b, float e){
+/**
+    private long Potencia(byte b, byte e){
         long p = b;
 
-        for(int i=1; i<e; i++){
-            p = b * b;
+        for(byte i=1; i<e; i++){
+            p = (long)b * (long)b;
         }
 
         return p;
     }
-
+**/
 
     public long SumarDigitosPrimos(){
         long num = this.numero;
@@ -330,9 +347,9 @@ public class clsNumero {
             k++;
 
             if(k!=pos){
-                s = s + k + Potencia(10, k);
+                s = s + k + Potencia((byte) 10, k);
             }else{
-                s =  s + dig * Potencia(10,k);
+                s =  s + dig * Potencia((byte) 10,k);
             }
         }
 

@@ -9,7 +9,7 @@ public class hdlNumero {
     //Implementación de los Métodos que manipularan los objetos e intancias de la clase Número
     //Negocio (controladores)
 
-    public static void CargarNumero (int num){
+    public static void CargarNumero (long num){
         objNum.setNumero(num);
     }
 
@@ -22,16 +22,16 @@ public class hdlNumero {
 
 
     public static void MostrarDigitosPares (){
-        objNum.getDigitosPares();
+        objNum.showDigitosPares();
     }
 
 
     public static void MostrarDigitosImpares (){
-        objNum.getDigitosImpares();
+        objNum.showDigitosImpares();
     }
 
     public static void CantidadDigitos (){
-        byte k = objNum.getCantidadDigitos();
+        byte k = objNum.CantidadDigitos();
         System.out.print("El número de digitos de " + objNum.getNumero() + " son " + k);
     }
 
@@ -60,8 +60,26 @@ public class hdlNumero {
 
 
     public static void MostrarDigitoMayor (){
-        byte my = objNum.DigitoMayor();
-        System.out.print("El dígito mayor de " + objNum.getNumero() + " es: " + my);
+        byte yMy = objNum.DigitoMayor();
+        System.out.print("El dígito mayor de " + objNum.getNumero() + " es: " + yMy);
+    }
+
+
+    public static void MostrarCantidadDigitos (byte dig){
+        byte yCant = objNum.Cantidad(dig);
+        System.out.print("En numero " + objNum.getNumero() + " tiene " + yCant + " digitos " + dig);
+    }
+
+
+    public static void NumeroEsPrimo (){
+        if (objNum.Primo()){
+            System.out.print("El numero es Primo");
+        }else {
+            System.out.print("El numero NO es Primo");
+        }
+
+
+
     }
 
 

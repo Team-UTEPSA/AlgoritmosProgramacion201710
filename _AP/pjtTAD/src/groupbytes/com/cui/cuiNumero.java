@@ -4,7 +4,7 @@ import groupbytes.com.hdl.hdlNumero;
 
 public class cuiNumero {
     private  static clsUtils mUtil = new clsUtils();
-    private static hdlNumero objNumero = new hdlNumero();
+    private static hdlNumero hdlNum = new hdlNumero();
 
     //Implementación del procedimiento principal MAIN
     //Interfaz del Usuario (runner)
@@ -26,54 +26,64 @@ public class cuiNumero {
         System.out.print("\t[F] Cantidad dígitos pares\n");
         System.out.print("\t[G] Cantidad dígitos impares\n");
         System.out.print("\t[H] Teorema de la numeración\n");
-        System.out.print("\t[I] Posición a consultar\n");
+        System.out.print("\t[I] Consultar digito en Posición\n");
         System.out.print("\t[J] Digito mayor\n");
+        System.out.print("\t[K] Contar Digito\n");
+        System.out.print("\t[L] Es primo\n");
+
+
 
 
         System.out.print("\t[S] Salir\n");
-
         System.out.print("\n");
     }
 
 
     public static void elegir_opcion (){
-        int iNum;
-        int k;
+        long iNum;
 
-        char cOpcion = mUtil.get_Letra("Elija una opción: ");
+        char cOpcion = mUtil.get_Opcion("Elija una opción: ");
+        System.out.print("\n");
 
         switch(cOpcion){
             case 'A':
-                iNum = mUtil.get_Int("Introduzca un numero: ");
-                objNumero.CargarNumero(iNum);
+                iNum = mUtil.get_Long("Introduzca un numero: ");
+                hdlNum.CargarNumero(iNum);
                 break;
             case 'B':
-                objNumero.MostrarNumero();
+                hdlNum.MostrarNumero();
                 break;
             case 'C':
-                objNumero.MostrarDigitosPares();
+                hdlNum.MostrarDigitosPares();
                 break;
             case 'D':
-                objNumero.MostrarDigitosImpares();
+                hdlNum.MostrarDigitosImpares();
                 break;
             case 'E':
-                objNumero.CantidadDigitos();
+                hdlNum.CantidadDigitos();
                 break;
             case 'F':
-                objNumero.MostrarCantidadDigitosPares();
+                hdlNum.MostrarCantidadDigitosPares();
                 break;
             case 'G':
-                objNumero.MostrarCantidadDigitosImpares();
+                hdlNum.MostrarCantidadDigitosImpares();
                 break;
             case 'H':
-                objNumero.TeoremaNumeracion();
+                hdlNum.TeoremaNumeracion();
                 break;
             case 'I':
                 byte yPos = mUtil.get_Byte("Introduzca la posición a consultar: ");
-                objNumero.MostrarDigitoPosicion(yPos);
+                hdlNum.MostrarDigitoPosicion(yPos);
                 break;
             case 'J':
-                objNumero.MostrarDigitoMayor();
+                hdlNum.MostrarDigitoMayor();
+                break;
+            case 'K':
+                byte yCant = mUtil.get_Byte("Digito a contar: ");
+                hdlNum.MostrarCantidadDigitos(yCant);
+                break;
+            case 'L':
+                hdlNum.NumeroEsPrimo();
                 break;
 
 
@@ -87,9 +97,8 @@ public class cuiNumero {
                 break;
         }
 
-        System.out.print("\n");
-        java.util.Scanner entrada = new java.util.Scanner(System.in);
-        String sEntrada = entrada.next();
+        System.out.print("\n\n");
+        cOpcion = mUtil.get_Opcion("[S] Salir: ");
         main(null);
     }
 

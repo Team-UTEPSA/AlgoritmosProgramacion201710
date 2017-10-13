@@ -8,19 +8,28 @@ public class clsUtils {
     }
 
 
-    public static int get_Int (String cad){
-        java.util.Scanner iNumero = new java.util.Scanner(System.in);
+    public static long get_Long (String cad){
+        java.util.Scanner entrada = new java.util.Scanner(System.in);
         System.out.print(cad);
-        int iNum = iNumero.nextInt();
+        long iNum = entrada.nextLong();
+
+        return iNum;
+    }
+
+
+    public static int get_Int (String cad){
+        java.util.Scanner entrada = new java.util.Scanner(System.in);
+        System.out.print(cad);
+        int iNum = entrada.nextInt();
 
         return iNum;
     }
 
 
     public static byte get_Byte (String cad){
-        java.util.Scanner yNumero = new java.util.Scanner(System.in);
+        java.util.Scanner entrada = new java.util.Scanner(System.in);
         System.out.print(cad);
-        byte yNum = yNumero.nextByte();
+        byte yNum = entrada.nextByte();
 
         return yNum;
     }
