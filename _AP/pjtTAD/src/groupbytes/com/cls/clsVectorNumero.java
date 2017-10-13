@@ -34,16 +34,15 @@ public class clsVectorNumero {
 
     public void CargarRandomico(int max){
         //this.vector = new clsNumero[max];
-        long numRandom;
+        long numRand;
         long numMin = 0;
-        long numMax = 1000;
+        long numMax = max;
 
         clsVector(max);
 
         for(int i=0; i<max; i++){
-            numRandom = numMin + (long)(Math.random() * numMax);
-            this.vector[i].setNumero(numRandom);
-            //System.out.println("(cls) Vector [" + i + "] = " + this.vector[i].getNumero());
+            numRand = numMin + (long)(Math.random() * numMax);
+            this.vector[i].setNumero(numRand);
         }
         this.maxDim = max;
         this.dimension = max - 1;

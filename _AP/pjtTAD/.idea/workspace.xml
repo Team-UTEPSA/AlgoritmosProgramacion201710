@@ -61,13 +61,13 @@
         <option value="$PROJECT_DIR$/src/groupbytes/com/cls/clsVector.java" />
         <option value="$PROJECT_DIR$/src/groupbytes/com/cui/cuiVector.java" />
         <option value="$PROJECT_DIR$/src/groupbytes/com/hdl/hdlVector.java" />
-        <option value="$PROJECT_DIR$/src/groupbytes/com/cls/clsVectorNumero.java" />
         <option value="$PROJECT_DIR$/src/groupbytes/com/cls/clsVectorCadena.java" />
         <option value="$PROJECT_DIR$/src/groupbytes/com/hdl/hdlVectorCadena.java" />
         <option value="$PROJECT_DIR$/src/groupbytes/com/cui/clsUtils.java" />
         <option value="$PROJECT_DIR$/src/groupbytes/com/hdl/hdlVectorNumero.java" />
         <option value="$PROJECT_DIR$/src/groupbytes/com/cui/cuiVectorNumero.java" />
         <option value="$PROJECT_DIR$/src/groupbytes/com/cui/cuiVectorCadena.java" />
+        <option value="$PROJECT_DIR$/src/groupbytes/com/cls/clsVectorNumero.java" />
       </list>
     </option>
   </component>
@@ -98,9 +98,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="AndroidView" />
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -124,27 +124,13 @@
               <item name="pjtTAD" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="cls" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pjtTAD" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pjtTAD" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="cui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pjtTAD" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pjtTAD" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="hdl" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -170,7 +156,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.cuiVectorCadena">
+  <component name="RunManager" selected="Application.cuiVectorNumero">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="groupbytes.com.cui.cuiCadena" />
@@ -294,8 +280,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.cuiVectorCadena" />
-        <item index="1" class="java.lang.String" itemvalue="Application.cuiVectorNumero" />
+        <item index="0" class="java.lang.String" itemvalue="Application.cuiVectorNumero" />
+        <item index="1" class="java.lang.String" itemvalue="Application.cuiVectorCadena" />
         <item index="2" class="java.lang.String" itemvalue="Application.cuiNumero" />
         <item index="3" class="java.lang.String" itemvalue="Application.MaxValueTypeData" />
         <item index="4" class="java.lang.String" itemvalue="Application.Main" />
@@ -335,18 +321,18 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.90522873" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20574887" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20877458" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -669,7 +655,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/groupbytes/com/cls/clsVectorNumero.java" />
     <entry file="file://$PROJECT_DIR$/src/groupbytes/com/cls/clsNumero.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -679,22 +664,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/groupbytes/com/hdl/hdlVectorCadena.java" />
     <entry file="file://$PROJECT_DIR$/src/groupbytes/com/cls/clsVectorCadena.java" />
-    <entry file="file://$PROJECT_DIR$/src/groupbytes/com/hdl/hdlVector.java">
+    <entry file="file://$PROJECT_DIR$/src/groupbytes/com/hdl/hdlVector.java" />
+    <entry file="file://$PROJECT_DIR$/src/groupbytes/com/cui/cuiVectorCadena.java" />
+    <entry file="file://$PROJECT_DIR$/src/groupbytes/com/cls/clsVectorNumero.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="434">
+          <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/groupbytes/com/hdl/hdlVectorNumero.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="21" column="23" lean-forward="false" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+          <folding>
+            <element signature="e#534#535#0" expanded="true" />
+            <element signature="e#577#578#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/groupbytes/com/cui/clsUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="75" column="11" lean-forward="true" selection-start-line="75" selection-start-column="11" selection-end-line="75" selection-end-column="11" />
+        <state relative-caret-position="274">
+          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/groupbytes/com/cui/cuiVectorNumero.java" />
-    <entry file="file://$PROJECT_DIR$/src/groupbytes/com/hdl/hdlVectorNumero.java" />
-    <entry file="file://$PROJECT_DIR$/src/groupbytes/com/cui/cuiVectorCadena.java" />
+    <entry file="file://$PROJECT_DIR$/src/groupbytes/com/cui/cuiVectorNumero.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="54" column="35" lean-forward="false" selection-start-line="54" selection-start-column="35" selection-end-line="54" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
