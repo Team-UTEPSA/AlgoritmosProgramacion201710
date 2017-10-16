@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=clsVectorNumero
+comment1.params=max
+comment1.target=void\ clsVector(int)
+comment10.params=
+comment10.target=int\ DimensionMaxima()
+comment11.params=
+comment11.target=boolean\ esBinario()
+comment2.params=num
+comment2.target=void\ addElemento(long)
+comment3.params=vec
+comment3.target=void\ addElementos(long[])
+comment4.params=max
+comment4.target=void\ CargarRandomico(int)
+comment5.params=
+comment5.target=long\ getPrimerElemento()
+comment6.params=pos
+comment6.target=long\ getElemento(int)
+comment7.params=
+comment7.target=long[]\ getElementos()
+comment8.params=
+comment8.target=long\ getUltimoElemento()
+comment9.params=
+comment9.target=int\ Dimension()
+numComments=12

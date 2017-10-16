@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=hdlVectorNumero
+comment1.params=maxDim
+comment1.target=void\ DimensionarVector(int)
+comment10.params=
+comment10.target=void\ vectorBinario()
+comment2.params=num
+comment2.target=void\ CargarElemento(long)
+comment3.params=max
+comment3.target=void\ CargarRandomico(int)
+comment4.params=
+comment4.target=void\ ObtenerPrimerElemento()
+comment5.params=pos
+comment5.target=void\ ObtenerElemento(int)
+comment6.params=
+comment6.target=void\ ObtenerElementos()
+comment7.params=
+comment7.target=void\ ObtenerUltimoElemento()
+comment8.params=
+comment8.target=void\ ObtenerCantidadElementos()
+comment9.params=
+comment9.target=void\ ObtenerDimensionMaxima()
+numComments=11

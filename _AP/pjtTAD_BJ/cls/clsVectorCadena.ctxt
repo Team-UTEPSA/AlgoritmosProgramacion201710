@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=clsVectorCadena
+comment1.params=max
+comment1.target=void\ clsVectorCadena(int)
+comment2.params=str
+comment2.target=void\ addElemento(java.lang.String)
+comment2.text=\r\n\ \ \ \ public\ void\ CargarRandomico(int\ max){\r\n\ \ \ \ \ \ \ \ //this.vector\ \=\ new\ clsNumero[max];\r\n\ \ \ \ \ \ \ \ long\ numRandom;\r\n\ \ \ \ \ \ \ \ long\ numMin\ \=\ 0;\r\n\ \ \ \ \ \ \ \ long\ numMax\ \=\ 1000;\r\n\r\n\ \ \ \ \ \ \ \ clsVectorCadena(max);\r\n\r\n\ \ \ \ \ \ \ \ for(int\ i\=0;\ i<max;\ i++){\r\n\ \ \ \ \ \ \ \ \ \ \ \ numRandom\ \=\ numMin\ +\ (long)(Math.random()\ *\ numMax);\r\n\ \ \ \ \ \ \ \ \ \ \ \ this.vector[i].setNumero(numRandom);\r\n\ \ \ \ \ \ \ \ \ \ \ \ //System.out.println("(cls)\ Vector\ ["\ +\ i\ +\ "]\ \=\ "\ +\ this.vector[i].getNumero());\r\n\ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ this.maxDim\ \=\ max;\r\n\ \ \ \ \ \ \ \ this.dimension\ \=\ max\ -\ 1;\r\n\ \ \ \ }\r\n
+comment3.params=vec
+comment3.target=void\ addElementos(java.lang.String[])
+comment4.params=
+comment4.target=java.lang.String\ getPrimerElemento()
+comment5.params=pos
+comment5.target=java.lang.String\ getElemento(int)
+comment6.params=
+comment6.target=java.lang.String[]\ getElementos()
+comment7.params=
+comment7.target=java.lang.String\ getUltimoElemento()
+comment8.params=
+comment8.target=int\ Dimension()
+comment9.params=
+comment9.target=int\ MaximaDimension()
+numComments=10

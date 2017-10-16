@@ -1,0 +1,27 @@
+#BlueJ class context
+comment0.target=hdlNumero
+comment1.params=num
+comment1.target=void\ CargarNumero(long)
+comment10.params=
+comment10.target=void\ MostrarDigitoMayor()
+comment11.params=dig
+comment11.target=void\ MostrarCantidadDigitos(byte)
+comment12.params=
+comment12.target=void\ NumeroEsPrimo()
+comment2.params=
+comment2.target=void\ MostrarNumero()
+comment3.params=
+comment3.target=void\ MostrarDigitosPares()
+comment4.params=
+comment4.target=void\ MostrarDigitosImpares()
+comment5.params=
+comment5.target=void\ CantidadDigitos()
+comment6.params=
+comment6.target=void\ MostrarCantidadDigitosPares()
+comment7.params=
+comment7.target=void\ MostrarCantidadDigitosImpares()
+comment8.params=
+comment8.target=void\ TeoremaNumeracion()
+comment9.params=pos
+comment9.target=void\ MostrarDigitoPosicion(byte)
+numComments=13

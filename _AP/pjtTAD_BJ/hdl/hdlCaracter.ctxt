@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=hdlCaracter
+comment1.params=car
+comment1.target=void\ CargarCaracter(char)
+comment2.params=
+comment2.target=void\ MostrarCaracter()
+numComments=3

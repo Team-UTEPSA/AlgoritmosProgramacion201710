@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=clsDigito
+comment1.params=
+comment1.target=void\ clsDigito()
+comment10.params=
+comment10.target=java.lang.String\ aString()
+comment2.params=d
+comment2.target=void\ setDigito(byte)
+comment3.params=
+comment3.target=byte\ getDigito()
+comment4.params=
+comment4.target=boolean\ Par()
+comment5.params=
+comment5.target=boolean\ Impar()
+comment6.params=
+comment6.target=boolean\ Primo()
+comment7.params=ddiv
+comment7.target=boolean\ Divisible(byte)
+comment8.params=
+comment8.target=boolean\ Encendido()
+comment9.params=
+comment9.target=boolean\ Apagado()
+numComments=11

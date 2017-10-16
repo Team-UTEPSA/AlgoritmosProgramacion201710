@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=hdlVectorCadena
+comment1.params=maxDim
+comment1.target=void\ DimensionarVector(int)
+comment2.params=cad
+comment2.target=void\ CargarElemento(java.lang.String)
+comment3.params=lstCad
+comment3.target=void\ CargarElementos(java.lang.String[])
+comment4.params=pos
+comment4.target=void\ ObtenerElemento(int)
+comment4.text=\r\n\ \ \ \ public\ static\ void\ CargarRandomico\ (int\ max){\r\n\ \ \ \ \ \ \ \ objVec.CargarRandomico(max);\r\n\ \ \ \ }\r\n
+comment5.params=
+comment5.target=void\ ObtenerElementos()
+comment6.params=
+comment6.target=void\ CantidadElementos()
+numComments=7

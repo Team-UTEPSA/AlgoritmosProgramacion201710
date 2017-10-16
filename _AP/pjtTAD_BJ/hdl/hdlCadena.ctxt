@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=hdlCadena
+comment1.params=cad
+comment1.target=void\ CargarCadena(java.lang.String)
+comment10.params=pal
+comment10.target=void\ EstaLaPalabra(java.lang.String)
+comment11.params=pos\ nCar
+comment11.target=void\ EliminarNCaracteres(int,\ int)
+comment2.params=
+comment2.target=void\ MostrarCadena()
+comment3.params=
+comment3.target=void\ MostrarDimension()
+comment4.params=
+comment4.target=void\ ConvertirEnMayuscula()
+comment5.params=
+comment5.target=void\ ConvertirEnMinuscula()
+comment6.params=
+comment6.target=void\ ConvertirPrimeraLetraMayuscula()
+comment7.params=
+comment7.target=void\ MostrarCantidadPalabras()
+comment8.params=
+comment8.target=void\ ListarPalabras()
+comment9.params=
+comment9.target=void\ PalabrasConUnEspacio()
+numComments=12
