@@ -88,8 +88,18 @@ public class clsDigito {
     }
 
     
+    public char aChar(){
+        return (char)this.digito;
+    }
+    
+    
     public String aString(){
         return "" + this.digito;
+    }
+    
+    
+    public int aASCII(){
+        return (int)aString().charAt(0);
     }
     
     
