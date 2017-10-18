@@ -3,7 +3,7 @@ package cui;
 import hdl.hdlDigito;
 
 public class cuiDigito {
-    private  static clsUtils mUtil = new clsUtils();
+    private  static clsUtilsCUI mUtil = new clsUtilsCUI();
     private static hdlDigito hdlDig = new hdlDigito();
 
     //Implementación del procedimiento principal MAIN

@@ -1,6 +1,6 @@
 package cui;
 
-public class clsUtils {
+public class clsUtilsCUI {
 
     public static void LimpiarPantalla (){
         System.out.print("\033[H\033[2J");

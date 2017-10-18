@@ -59,7 +59,7 @@ public class clsNumero {
     }
 
 
-    public long getDigitosPares (){
+    public long DigitosPares (){
         long num = this.numero;
         clsDigito objDig = new clsDigito();
         byte d;
@@ -72,7 +72,6 @@ public class clsNumero {
             
             if (objDig.Par()){ 
                 AccDig = AccDig + objDig.aString();
-                //System.out.print(d);
             }
         }
         return Long.parseLong(AccDig);
@@ -92,7 +91,6 @@ public class clsNumero {
             
             if (!objDig.Par()){
                 AccDig = AccDig + objDig.aString();
-                //System.out.print(d);
             }
         }
         return Long.parseLong(AccDig);
@@ -167,7 +165,6 @@ public class clsNumero {
             num = num / 10;
             s = s + d * Potencia((byte) 10, k);
             dpN[k] = d * Potencia((byte) 10, k);
-            //System.out.println(d * Potencia((byte) 10, k));
             k++;
         }
         return dpN;
@@ -256,6 +253,16 @@ public class clsNumero {
         return dmy;
     }
 
+        
+    public String aString(){
+        return ""+this.numero;
+    }
+    
+    
+    
+    
+    
+    
 
     //Metodos:: Por Probar y por programar de aqui en adelante
     public void CambiarDigito1(byte pos, byte dig){

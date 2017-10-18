@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=clsUtilsCUI
+comment1.params=
+comment1.target=void\ LimpiarPantalla()
+comment2.params=msg
+comment2.target=long\ get_Long(java.lang.String)
+comment3.params=msg
+comment3.target=int\ get_Int(java.lang.String)
+comment4.params=msg
+comment4.target=byte\ get_Byte(java.lang.String)
+comment5.params=msg
+comment5.target=java.lang.String\ get_String(java.lang.String)
+comment6.params=msg
+comment6.target=char\ get_Char(java.lang.String)
+comment7.params=msg
+comment7.target=char\ get_Opcion(java.lang.String)
+comment8.params=msg
+comment8.target=char\ get_Letra(java.lang.String)
+numComments=9

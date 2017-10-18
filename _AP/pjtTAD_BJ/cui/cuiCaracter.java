@@ -3,7 +3,7 @@ package cui;
 import hdl.hdlCaracter;
 
 public class cuiCaracter {
-    private  static clsUtils mUtil = new clsUtils();
+    private  static clsUtilsCUI mUtil = new clsUtilsCUI();
     private static hdlCaracter hdlCar = new hdlCaracter();
 
     //Implementación del procedimiento principal MAIN

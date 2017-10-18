@@ -3,7 +3,7 @@ package cui;
 import hdl.hdlVectorCadena;
 
 public class cuiVectorCadena {
-    private  static clsUtils mUtil = new clsUtils();
+    private  static clsUtilsCUI mUtil = new clsUtilsCUI();
     private static hdlVectorCadena hdlVec = new hdlVectorCadena();
 
     //Implementación del procedimiento principal MAIN

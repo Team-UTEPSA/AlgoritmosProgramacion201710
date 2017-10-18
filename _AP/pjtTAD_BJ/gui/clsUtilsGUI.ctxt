@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=clsUtilsGUI
+comment1.params=msg
+comment1.target=void\ msgbox(java.lang.String)
+numComments=2

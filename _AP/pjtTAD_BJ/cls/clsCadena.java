@@ -39,7 +39,7 @@ public class clsCadena {
             car = this.cadena.charAt(i);
             objCar.setCaracter(car);
             objCar.aMayuscula();
-            NewCad = NewCad + objCar.getString();
+            NewCad = NewCad + objCar.aString();
             i++;
         }
         this.cadena = NewCad;
@@ -57,7 +57,7 @@ public class clsCadena {
             car = this.cadena.charAt(i);
             objCar.setCaracter(car);
             objCar.aMinuscula();
-            NewCad = NewCad + objCar.getString();
+            NewCad = NewCad + objCar.aString();
             i++;
         }
         this.cadena = NewCad;
@@ -87,7 +87,7 @@ public class clsCadena {
                 }
             }
 
-            NewCad = NewCad + objCar.getString();
+            NewCad = NewCad + objCar.aString();
             i++;
         }
         this.cadena = NewCad;
@@ -144,7 +144,7 @@ public class clsCadena {
                 }
                 cadAcc = "";
             }else {
-                cadAcc = cadAcc + objCar.getString();
+                cadAcc = cadAcc + objCar.aString();
                 swAcc = true;
             }
             i++;

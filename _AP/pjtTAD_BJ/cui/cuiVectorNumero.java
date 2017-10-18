@@ -3,7 +3,7 @@ package cui;
 import hdl.hdlVectorNumero;
 
 public class cuiVectorNumero {
-    private  static clsUtils mUtil = new clsUtils();
+    private  static clsUtilsCUI mUtil = new clsUtilsCUI();
     private static hdlVectorNumero hdlVec = new hdlVectorNumero();
 
     //Implementación del procedimiento principal MAIN

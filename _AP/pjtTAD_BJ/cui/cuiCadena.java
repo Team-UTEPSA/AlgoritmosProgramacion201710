@@ -3,7 +3,7 @@ package cui;
 import hdl.hdlCadena;
 
 public class cuiCadena {
-    private  static clsUtils mUtil = new clsUtils();
+    private  static clsUtilsCUI mUtil = new clsUtilsCUI();
     private static hdlCadena hdlCad = new hdlCadena();
 
     //Implementación del procedimiento principal MAIN

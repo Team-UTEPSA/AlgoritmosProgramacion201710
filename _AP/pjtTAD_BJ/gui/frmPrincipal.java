@@ -24,15 +24,15 @@ public class frmPrincipal extends JFrame {
     private JButton btnClaseRondaCadena = new JButton("Ronda Cadena");
     private JButton btnClaseArbolNumero = new JButton("Arbol Numero");
     private JButton btnClaseArbolCadena = new JButton("Arbol Cadena");
-    
-    
+    private JButton btnClaseGrafoNumero = new JButton("Grafo Numero");
+    private JButton btnClaseGrafoCadena = new JButton("Grafo Cadena");    
     private JButton btnClaseArchivoTexto = new JButton("Archivo Texto");
     private JButton btnClaseArchivoBinario = new JButton("Archivo Binario");
     private JButton btnClaseArchivoXML = new JButton("Archivo XML");
     private JButton btnClaseArchivoJSON = new JButton("Archivo JSON");
     private JButton btnACercaDe = new JButton("A cerca de...");
     private JButton btnSalir = new JButton("Salir");
-
+    private clsUtilsGUI mUtils = new clsUtilsGUI();
 
     //Constructor
     public frmPrincipal() {
@@ -47,6 +47,7 @@ public class frmPrincipal extends JFrame {
     //Runner
     public static void main(String[] args) {
         frmPrincipal frmP = new frmPrincipal();
+
         frmP.setVisible(true);
     }
 
@@ -203,7 +204,24 @@ public class frmPrincipal extends JFrame {
                 btnClaseArbolCadena_actionPerformed(e);
             }
         });
-
+        
+        
+        btnClaseGrafoNumero.setBounds(new Rectangle(btnPosX, (btnPosY+btnEspacio*32), btnAncho, btnAlto));
+        btnClaseGrafoNumero.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                btnClaseGrafoNumero_actionPerformed(e);
+            }
+        });
+        
+        btnClaseGrafoCadena.setBounds(new Rectangle((btnPosX+btnEspacio*16), (btnPosY+btnEspacio*32), btnAncho, btnAlto));
+        btnClaseGrafoCadena.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                btnClaseGrafoCadena_actionPerformed(e);
+            }
+        });        
+        
         btnClaseArchivoTexto.setBounds(new Rectangle((btnPosX+btnEspacio*32), btnPosY , btnAncho, btnAlto));
         btnClaseArchivoTexto.addActionListener(new ActionListener() {
             @Override
@@ -271,6 +289,8 @@ public class frmPrincipal extends JFrame {
         getContentPane().add(btnClaseRondaCadena, null);
         getContentPane().add(btnClaseArbolNumero, null);
         getContentPane().add(btnClaseArbolCadena, null);
+        getContentPane().add(btnClaseGrafoNumero, null);
+        getContentPane().add(btnClaseGrafoCadena, null);
         getContentPane().add(btnClaseArchivoTexto, null);
         getContentPane().add(btnClaseArchivoBinario, null);
         getContentPane().add(btnClaseArchivoXML, null);
@@ -291,7 +311,8 @@ public class frmPrincipal extends JFrame {
     }
 
     private void btnClaseNumero_actionPerformed(ActionEvent e) {
-        System.out.println("Clic en Clase Numero");
+        frmNumero frmNum = new frmNumero();
+        frmNum.setVisible(true);
     }
 
     private void btnClaseCadena_actionPerformed(ActionEvent e) {
@@ -299,9 +320,10 @@ public class frmPrincipal extends JFrame {
     }
 
     private void btnClaseVectorNumero_actionPerformed(ActionEvent e) {
-        System.out.println("Clic en Clase Vector Numero");
+        frmVectorNumero frmVNum = new frmVectorNumero();
+        frmVNum.setVisible(true);
     }
-
+    
     private void btnClaseVectorCadena_actionPerformed(ActionEvent e) {
         System.out.println("Clic en Clase Vector Cadena");
     }
@@ -346,6 +368,14 @@ public class frmPrincipal extends JFrame {
         System.out.println("Clic en Clase Arbol Cadena");
     }
 
+    private void btnClaseGrafoNumero_actionPerformed(ActionEvent e) {
+        System.out.println("Clic en Clase Grafo Numero");
+    }
+    
+    private void btnClaseGrafoCadena_actionPerformed(ActionEvent e) {
+        mUtils.msgbox("Clic en Clase Grafo Cadena");
+    }
+   
     private void btnClaseArchivoTexto_actionPerformed(ActionEvent e) {
         System.out.println("Clic en Clase Archivo Texto");
     }
@@ -369,8 +399,9 @@ public class frmPrincipal extends JFrame {
     private void btnSalir_actionPerformed(ActionEvent e) {
         System.exit( 0 );
     }
-
-
+    
+    
+    //Metodo a ser exportado a clsUtils
     private void showDialog()
     {
         JDialog frmDlg = new JDialog(this, Dialog.ModalityType.APPLICATION_MODAL);
