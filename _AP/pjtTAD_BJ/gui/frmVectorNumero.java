@@ -14,6 +14,10 @@ import javax.swing.JTable;
 import javax.swing.table.AbstractTableModel;
 import javax.swing.table.TableModel;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.SwingConstants;
+
+import javax.swing.table.DefaultTableCellRenderer;
+import javax.swing.table.*;
 
 
 import cls.*;
@@ -26,11 +30,14 @@ public class frmVectorNumero extends JFrame{
     private JLabel lblSalida = new JLabel("Salida:");
     private JTextField txtEntrada = new JTextField();
     private JTextField txtSalida = new JTextField();
-    private JTable tblSalida = new JTable();
+    private JTable tblSalida;
     private JButton btnCargar = new JButton("Cargar");
     private JButton btnObtener = new JButton("Obtener");
     private JButton btnNumerosPares = new JButton("Ver números pares");
     
+    
+    //private JFrame frame = new JFrame("VECTOR");
+    private JPanel pnlTabla = new JPanel();
     
     
     
@@ -78,15 +85,15 @@ public class frmVectorNumero extends JFrame{
         lblTitulo.setHorizontalAlignment(SwingConstants.CENTER);
         lblTitulo.setFont(new Font(Font.SANS_SERIF, Font.BOLD, 16));
 
-        lblEntrada.setBounds(new Rectangle(10, 40, 50, 30));
         
-        lblSalida.setBounds(new Rectangle(10, 80, 50, 30));
+                
+        lblEntrada.setBounds(10, 40, 50, 30);
         
-        txtEntrada.setBounds(new Rectangle(62, 40, 320, 30));
+        lblSalida.setBounds(10, 80, 50, 30);
+        
+        txtEntrada.setBounds(62, 40, 320, 30);
   
-        txtSalida.setBounds(new Rectangle(62, 80, 430, 30));        
-        
-        tblSalida.setBounds(new Rectangle(10, 110, 490, 70));
+        txtSalida.setBounds(62, 80, 430, 30);        
         
         
         
@@ -95,34 +102,94 @@ public class frmVectorNumero extends JFrame{
         
         Object[][] fil = new Object[k][k];
         Object[] col = new Object[k];
-        
-        
+                
         for(int i=0; i<k; i++){
-            col[i] = i*i;
+            col[i] = i;
             for(int j=0; j<10; j++){
                 fil[i][j]= val;
                 val++;
             }
         }
         
+        //JTable tblSalida = new JTable(fil, col);
         tblSalida = new JTable(fil, col);
-                
-        tblSalida.setBounds(new Rectangle(10, 110, 490, 70));
+        
+        
+        JScrollPane sclTabla = new JScrollPane(tblSalida);
+        sclTabla.setViewportView(tblSalida);
+        
+              
+        
+        tblSalida.getTableHeader().setFont(new Font("Times New Roman", 1, 16)); //Dialog, SansSerif, Verdana, Cooper Black, Arial
+        tblSalida.getTableHeader().setBackground(Color.ORANGE);
+        tblSalida.getTableHeader().setForeground(Color.blue);
         tblSalida.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
-        DefaultTableModel model = new DefaultTableModel(fil,col);
-        tblSalida.setPreferredScrollableViewportSize(new Dimension(450,63));
-        tblSalida.setFillsViewportHeight(true);
+        
+        //int i = tblSalida.getColumnCount();
+        //System.out.println(i);
+        
+        //Alinea una columna de la JTable
+        //DefaultTableCellRenderer Alinear = new DefaultTableCellRenderer(); 
+        //Alinear.setHorizontalAlignment(SwingConstants.CENTER);//.LEFT .RIGHT .CENTER
+        //tblSalida.getColumnModel().getColumn(2).setCellRenderer(Alinear);
         
         
         
-        Object oInput = 9999;
-        tblSalida.setValueAt(oInput, 1, 1);
-        Object oOutput = tblSalida.getValueAt(1,1);
-        txtSalida.setText(oOutput.toString());
+        setCellsAlignment(tblSalida, SwingConstants.CENTER);
+        
+        
+        //DefaultTableCellRenderer tcr = new DefaultTableCellRenderer();
+        //tcr.setHorizontalAlignment(SwingConstans.CENTER);
+        //tblSalida.getColumnModel().getColumn(column).setCellRenderer(tcr);
+        
+        
+        //JTableHeader encabezado = tblSalida.getTableHeader();
+        //encabezado.setBackground(Color.ORANGE);
+        //encabezado.setForeground(Color.blue);
+        //ttblSalida.getTableHeader().
+        //encabezado.setFont(new Font("Verdana", Font.BOLD, 12)); 
+        //JScrollPane sclTabla = new JScrollPane(tblSalida);
+        //tblSalida.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
+        
+        
+        //Object[] nombrecolumnas = {"Nombre", "Apellido", "Edad"};
+        //Object[][] datos ={{"Nombre1", "Apellido1", 22},{"Nombre2", "Apellido2", 4}};
+        //JTable tabla = new JTable(datos,nombrecolumnas);
+        //Jframe.add(tabla);
+        //getContentPane().add(tabla, null);
+        
+        //JScrollPane sclTabla1 = new JScrollPane(tblSalida);
+        sclTabla.setViewportView(tblSalida);
+        
+        pnlTabla.add(sclTabla);
+        //pnlTabla.add(tabla);
+        
+        
+        
+        //tblSalida.setBounds(10, 110, 490, 70);
+        //pnlTabla.add(tblSalida);
+        pnlTabla.setBounds(0, 110, 500, 70);
+        
+        
+        
+        //DefaultTableModel model = new DefaultTableModel(fil,col);
+        //tblSalida.setPreferredScrollableViewportSize(new Dimension(450,63));
+        //tblSalida.setFillsViewportHeight(true);
+        
+        
+        
+        //Object oInput = 9999;
+        //tblSalida.setValueAt(oInput, 1, 1);
+        //Object oOutput = tblSalida.getValueAt(1,1);
+        //txtSalida.setText(oOutput.toString());
         
    
         
-        btnCargar.setBounds(new Rectangle(390, 40, 100, 30));
+
+        
+        
+        
+        btnCargar.setBounds(390, 40, 100, 30);
         btnCargar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -130,7 +197,7 @@ public class frmVectorNumero extends JFrame{
             }
         });
         
-        btnObtener.setBounds(new Rectangle(10, 200, 150, 30));
+        btnObtener.setBounds(10, 200, 150, 30);
         btnObtener.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -138,7 +205,7 @@ public class frmVectorNumero extends JFrame{
             }
         });        
                 
-        btnNumerosPares.setBounds(new Rectangle(170, 200, 150, 30));
+        btnNumerosPares.setBounds(170, 200, 150, 30);
         btnNumerosPares.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -149,7 +216,7 @@ public class frmVectorNumero extends JFrame{
         
 
         
-        btnCerrar.setBounds(new Rectangle(getWidth()-120, (getHeight()-70), 100, 30));
+        btnCerrar.setBounds(getWidth()-120, (getHeight()-70), 100, 30);
         btnCerrar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -166,7 +233,8 @@ public class frmVectorNumero extends JFrame{
         getContentPane().add(txtEntrada, null); 
         getContentPane().add(txtSalida, null);
         getContentPane().add(txtSalida, null);
-        getContentPane().add(tblSalida, null);
+        //getContentPane().add(tblSalida, null);
+        getContentPane().add(pnlTabla, null);
         getContentPane().add(btnCargar, null);
         getContentPane().add(btnObtener, null);
         getContentPane().add(btnNumerosPares, null);
@@ -200,4 +268,21 @@ public class frmVectorNumero extends JFrame{
     
     
     
+    //Procedimiento:: Permite alinear los datos de un JTable
+    public static void setCellsAlignment(JTable table, int alignment)
+    {
+        DefaultTableCellRenderer rightRenderer = new DefaultTableCellRenderer();
+        rightRenderer.setHorizontalAlignment(alignment);
+        TableModel tableModel = table.getModel();
+
+        for (int columnIndex = 0; columnIndex < tableModel.getColumnCount(); columnIndex++)
+        {
+            table.getColumnModel().getColumn(columnIndex).setCellRenderer(rightRenderer);
+        }
+    }
+    
+
 }
+    
+    
+
