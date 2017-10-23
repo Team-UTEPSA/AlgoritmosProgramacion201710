@@ -18,6 +18,7 @@ public class frmNumero extends JFrame{
     private JButton btnCargar = new JButton("Cargar");
     private JButton btnObtener = new JButton("Obtener");
     private JButton btnDigitosPares = new JButton("Ver digitos pares");
+    private JButton btnDigitosImpares = new JButton("Ver digitos impares");
     
    
     
@@ -97,7 +98,13 @@ public class frmNumero extends JFrame{
             }
         });     
         
-        
+        btnDigitosImpares.setBounds(new Rectangle(330, 120, 150, 30));
+        btnDigitosImpares.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                btnDigitosImpares_actionPerformed(e);
+            }
+        });         
         
         
         
@@ -122,6 +129,7 @@ public class frmNumero extends JFrame{
         getContentPane().add(btnCargar, null);
         getContentPane().add(btnObtener, null);
         getContentPane().add(btnDigitosPares, null);
+        getContentPane().add(btnDigitosImpares, null);
         
         
         getContentPane().add(btnCerrar, null);
@@ -140,7 +148,19 @@ public class frmNumero extends JFrame{
     }
     
     private void btnDigitosPares_actionPerformed(ActionEvent e) {
-        txtSalida.setText(""+(objNum.DigitosPares()));
+        try {
+            txtSalida.setText(""+(objNum.DigitosPares()));
+        } catch (Exception me) {
+            mUtils.msgbox("ERROR:: El valor de retorno del método es nulo" + "\n\n"+ me + "\n\n");
+        }
+    }
+    
+        private void btnDigitosImpares_actionPerformed(ActionEvent e) {
+        try {
+            txtSalida.setText(""+(objNum.DigitosImpares()));
+        } catch (Exception me) {
+            mUtils.msgbox("ERROR:: El valor de retorno del método es nulo" + "\n\n"+ me + "\n\n");
+        }
     }
     
     

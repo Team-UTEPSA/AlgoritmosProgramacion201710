@@ -31,9 +31,16 @@ public class frmVectorNumero extends JFrame{
     private JTextField txtEntrada = new JTextField();
     private JTextField txtSalida = new JTextField();
     private JTable tblSalida;
+    private JButton btnDimensionar = new JButton("Dimensionar");
     private JButton btnCargar = new JButton("Cargar");
+    private JButton btnCargarRandomico = new JButton("Cargar Randomico");
+    private JButton btnListarElementos = new JButton("Listar Elementos");
     private JButton btnObtener = new JButton("Obtener");
+    private JButton btnEliminar = new JButton("Eliminar");
     private JButton btnNumerosPares = new JButton("Ver números pares");
+    private JButton btnNumerosImpares = new JButton("Ver números impares");
+    private JButton btnNumerosPrimos = new JButton("Ver números primos");
+    private JButton btnSumar = new JButton("Sumar dos numeros");
     
     
     //private JFrame frame = new JFrame("VECTOR");
@@ -68,7 +75,7 @@ public class frmVectorNumero extends JFrame{
     
     
     private void jbInit() throws Exception {
-        int frmAncho = 515;
+        int frmAncho = 560;
         int frmAlto = 500;
 
         //frmPrincipal:: Configurarción de las propiedades del Formulario
@@ -91,28 +98,45 @@ public class frmVectorNumero extends JFrame{
         
         lblSalida.setBounds(10, 80, 50, 30);
         
-        txtEntrada.setBounds(62, 40, 320, 30);
+        txtEntrada.setBounds(62, 40, 120, 30);
   
         txtSalida.setBounds(62, 80, 430, 30);        
         
         
         
-        int k = 10;
+        int k = 20;
         int val = 0;
         
-        Object[][] fil = new Object[k][k];
+        
         Object[] col = new Object[k];
-                
+        
+        Object[][] fil = new Object[k][k];
+        
+        
         for(int i=0; i<k; i++){
             col[i] = i;
-            for(int j=0; j<10; j++){
+            for(int j=0; j<k; j++){
                 fil[i][j]= val;
                 val++;
             }
         }
         
+        
+        /**
+        for(int j=0; j<k; j++){
+            col[j]= j;  //col fil
+        }
+        
+        for(int i=0; i<k; i++){
+            fil[0][i]= val;  //col fil
+            val++;
+        }
+    
+            
         //JTable tblSalida = new JTable(fil, col);
-        tblSalida = new JTable(fil, col);
+        
+        **/
+        tblSalida = new JTable(fil, col);  //fil col
         
         
         JScrollPane sclTabla = new JScrollPane(tblSalida);
@@ -168,7 +192,7 @@ public class frmVectorNumero extends JFrame{
         
         //tblSalida.setBounds(10, 110, 490, 70);
         //pnlTabla.add(tblSalida);
-        pnlTabla.setBounds(0, 110, 500, 70);
+        pnlTabla.setBounds(0, 110, 475, 70);
         
         
         
@@ -185,11 +209,8 @@ public class frmVectorNumero extends JFrame{
         
    
         
-
         
-        
-        
-        btnCargar.setBounds(390, 40, 100, 30);
+        btnCargar.setBounds(190, 40, 170, 30);
         btnCargar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -197,15 +218,40 @@ public class frmVectorNumero extends JFrame{
             }
         });
         
-        btnObtener.setBounds(10, 200, 150, 30);
+        btnDimensionar.setBounds(370, 40, 170, 30);
+        btnDimensionar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                btnDimensionar_actionPerformed(e);
+            }
+        });
+        
+        btnCargarRandomico.setBounds(10, 200, 170, 30);
+        btnCargar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                btnCargar_actionPerformed(e);
+            }
+        });
+        
+        
+        btnObtener.setBounds(190, 200, 170, 30);
         btnObtener.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 btnObtener_actionPerformed(e);
             }
         });        
+        
+        btnEliminar.setBounds(370, 200, 170, 30);
+        btnEliminar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                btnEliminar_actionPerformed(e);
+            }
+        });        
                 
-        btnNumerosPares.setBounds(170, 200, 150, 30);
+        btnNumerosPares.setBounds(10, 240, 170, 30);
         btnNumerosPares.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -213,8 +259,34 @@ public class frmVectorNumero extends JFrame{
             }
         });     
         
+        btnNumerosImpares.setBounds(190, 240, 170, 30);
+        btnNumerosImpares.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                btnNumerosImpares_actionPerformed(e);
+            }
+        });     
+        
+        
+        btnNumerosPrimos.setBounds(370, 240, 170, 30);
+        btnNumerosPrimos.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                btnNumerosPrimos_actionPerformed(e);
+            }
+        });     
         
 
+        btnSumar.setBounds(10, 280, 170, 30);
+        btnSumar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                btnSumar_actionPerformed(e);
+            }
+        });          
+        
+        
+        
         
         btnCerrar.setBounds(getWidth()-120, (getHeight()-70), 100, 30);
         btnCerrar.addActionListener(new ActionListener() {
@@ -235,22 +307,42 @@ public class frmVectorNumero extends JFrame{
         getContentPane().add(txtSalida, null);
         //getContentPane().add(tblSalida, null);
         getContentPane().add(pnlTabla, null);
+        getContentPane().add(btnDimensionar, null);
         getContentPane().add(btnCargar, null);
+        getContentPane().add(btnCargarRandomico, null);
         getContentPane().add(btnObtener, null);
+        getContentPane().add(btnEliminar, null);
         getContentPane().add(btnNumerosPares, null);
+        getContentPane().add(btnNumerosImpares, null);
+        getContentPane().add(btnNumerosPrimos, null);
+        getContentPane().add(btnSumar, null);        
+        
         
         getContentPane().add(btnCerrar, null);
         
     }
     
-    
+    private void btnDimensionar_actionPerformed(ActionEvent e) {           
+        //long iNum = Long.parseLong(txtEntrada.getText());
+        //objNum.setNumero(iNum);
+        //txtSalida.setText("");
+    }
+        
     private void btnCargar_actionPerformed(ActionEvent e) {           
         //long iNum = Long.parseLong(txtEntrada.getText());
         //objNum.setNumero(iNum);
         //txtSalida.setText("");
     }
     
+    private void btnCargarRandomico_actionPerformed(ActionEvent e) {
+        //txtSalida.setText(""+(objNum.DigitosPares()));
+    }
+
     private void btnObtener_actionPerformed(ActionEvent e) {
+        //txtSalida.setText(objNum.aString());
+    }
+    
+    private void btnEliminar_actionPerformed(ActionEvent e) {
         //txtSalida.setText(objNum.aString());
     }
     
@@ -258,8 +350,22 @@ public class frmVectorNumero extends JFrame{
         //txtSalida.setText(""+(objNum.DigitosPares()));
     }
     
+    private void btnNumerosImpares_actionPerformed(ActionEvent e) {
+        //txtSalida.setText(""+(objNum.DigitosPares()));
+    }
+    
+    private void btnNumerosPrimos_actionPerformed(ActionEvent e) {
+        //txtSalida.setText(""+(objNum.DigitosPares()));
+    }
     
     
+    private void btnSumar_actionPerformed(ActionEvent e) {
+        byte x = mUtils.inputbox_Byte("x: ");
+        byte y = mUtils.inputbox_Byte("y: ");
+        int z= x + y;
+        String mostrar = x + " + " + y + " = " + z;
+        mUtils.msgbox(mostrar);
+    }
     
     
     private void btnCerrar_actionPerformed(ActionEvent e) {

@@ -2,4 +2,10 @@
 comment0.target=clsUtilsGUI
 comment1.params=msg
 comment1.target=void\ msgbox(java.lang.String)
-numComments=2
+comment2.params=msg
+comment2.target=byte\ inputbox_Byte(java.lang.String)
+comment3.params=msg
+comment3.target=int\ inputbox_Int(java.lang.String)
+comment4.params=msg
+comment4.target=java.lang.String\ inputbox_String(java.lang.String)
+numComments=5

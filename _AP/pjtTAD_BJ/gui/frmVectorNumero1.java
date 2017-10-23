@@ -37,23 +37,27 @@ public class frmVectorNumero1{
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
         
-        int k = 200;
+        int c = 100;
+        int f = 5;
+        
+        
         int val = 0;
         
-        Object[][] fil = new Object[k][k];
-        Object[] col = new Object[k];
+        Object[] head = new Object[c];
+        Object[][] data = new Object[c][f];
+        
                 
-        for(int i=0; i<k; i++){
-            col[i] = i;
-            for(int j=0; j<k; j++){
-                fil[i][j]= val;
+        for(int i=0; i<c; i++){
+            head[i] = i;
+            for(int j=0; j<f; j++){
+                data[i][j]= val;
                 val++;
             }
         }
         
 
        
-        JTable tblSalida = new JTable(fil,col);
+        JTable tblSalida = new JTable(data,head);
         //tblSalida.setBounds(new Rectangle(0, 5, 100, 50));
         //tblSalida.setBounds(10, 40, 50, 30);
         tblSalida.setSize(new Dimension(50,63));
