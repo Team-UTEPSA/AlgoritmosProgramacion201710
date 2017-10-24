@@ -1,6 +1,8 @@
   /* 
 Programa: Control de Acceso a Puertas con Clave y Display LCD
-Código de Dominio Público
+Autor: Adrian Enrique Borja Churqui
+Universidad: Utepsa
+
 */
 
 #include <Password.h>
