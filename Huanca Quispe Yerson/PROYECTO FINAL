@@ -1,0 +1,215 @@
+create table usuario
+(
+NOMBRE       varchar(30) primary key,
+CONTRASEÑA   varchar(30),
+TIPO         varchar(20)
+)
+insert into usuario(NOMBRE,CONTRASEÑA,TIPO)
+values('Juan','123','administrador')
+insert into usuario(NOMBRE,CONTRASEÑA,TIPO)
+values('jose','123','usuario')
+
+create table proveedor
+(
+ CI               integer primary key,
+ NOMBRE           varchar(20),
+ TELEFONO         integer,
+ CORREO           varchar(50),
+ NOMB_USU         varchar(30),
+
+ foreign key(NOMB_USU)references usuario(NOMBRE)
+)
+insert into proveedor(CI,NOMBRE,TELEFONO,CORREO,NOMB_USU)
+values(8459687,'Pedro',78549685,'Pedro@gmail.com','juan')
+insert into proveedor(CI,NOMBRE,TELEFONO,CORREO,NOMB_USU)
+values(7459681,'Julio',78549685,'julio@gmail.com','juan')
+insert into proveedor(CI,NOMBRE,TELEFONO,CORREO,NOMB_USU)
+values(6685682,'Jose',78549685,'jose@gmail.com','jose')
+insert into proveedor(CI,NOMBRE,TELEFONO,CORREO,NOMB_USU)
+values(5459683,'Cesar',78549685,'cesar@gmail.com','jose')
+insert into proveedor(CI,NOMBRE,TELEFONO,CORREO,NOMB_USU)
+values(4459683,'Anahi',65948578,'anahi@gmail.com','jose')
+select *
+from proveedor
+
+create table solicitud
+(
+ CODIGO           integer primary key,
+ DESCRIPCION      varchar(30),
+ CI_PROVEEDOR     integer,
+ NOMB_USU         varchar(30),
+
+ foreign key(CI_PROVEEDOR)references proveedor(CI),
+ foreign key(NOMB_USU)references usuario(NOMBRE)
+)
+insert into solicitud(CODIGO,DESCRIPCION,CI_PROVEEDOR,NOMB_USU)
+values(1,'Laptop',5459683,'jose')
+insert into solicitud(CODIGO,DESCRIPCION,CI_PROVEEDOR,NOMB_USU)
+values(2,'Procesador',4459683,'jose')
+insert into solicitud(CODIGO,DESCRIPCION,CI_PROVEEDOR,NOMB_USU)
+values(3,'Computadora de escritorio',6685682,'juan')
+insert into solicitud(CODIGO,DESCRIPCION,CI_PROVEEDOR,NOMB_USU)
+values(4,'Pantalla',7459681,'jose')
+insert into solicitud(CODIGO,DESCRIPCION,CI_PROVEEDOR,NOMB_USU)
+values(5,'Teclado',8459687,'juan')
+select *
+from solicitud
+
+create table categoria
+(
+ ID               varchar(20) primary key,
+ MARCA            varchar(30),
+ GARANTIA         varchar(20)
+)
+insert into categoria(ID,MARCA,GARANTIA)
+values('Ap','Apple','1 Año')
+insert into categoria(ID,MARCA,GARANTIA)
+values('HP','Hewlett-Packard(HP)','2 Año')
+insert into categoria(ID,MARCA,GARANTIA)
+values('SUG','Samsung','1 Año')
+insert into categoria(ID,MARCA,GARANTIA)
+values('DLL','Dell','3 Año')
+insert into categoria(ID,MARCA,GARANTIA)
+values('THB','Toshiba','2 Año')
+select *
+from categoria
+
+create table producto
+(
+ ID               integer primary key,
+ NOMBRE           varchar(30),
+ CANTIDAD         integer,
+ ID_CATEGORIA     varchar(20),
+
+ foreign key(ID_CATEGORIA)references categoria(ID)
+)
+insert into producto(ID,NOMBRE,CANTIDAD,ID_CATEGORIA)
+values(12365,'Laptop',7,'HP')
+insert into producto(ID,NOMBRE,CANTIDAD,ID_CATEGORIA)
+values(84596,'Tableta',8,'AP')
+insert into producto(ID,NOMBRE,CANTIDAD,ID_CATEGORIA)
+values(15896,'Disco Duro',9,'THB')
+insert into producto(ID,NOMBRE,CANTIDAD,ID_CATEGORIA)
+values(15847,'Computadora de Escritorio',3,'DLL')
+insert into producto(ID,NOMBRE,CANTIDAD,ID_CATEGORIA)
+values(53695,'Pantalla',15,'SUG')
+select *
+from producto
+
+create table detalleSP
+(
+ COD_SOLICITUD    integer,
+ ID_PRODUCTO      integer,
+ CANTIDAD         integer,
+ PRECIO           varchar(30),
+ 
+ foreign key(COD_SOLICITUD)references solicitud(CODIGO),
+ foreign key(ID_PRODUCTO)references producto(ID)
+)
+insert into detalleSP(COD_SOLICITUD,ID_PRODUCTO,CANTIDAD,PRECIO)
+values(1,12365,5,'1500 bs')
+insert into detalleSP(COD_SOLICITUD,ID_PRODUCTO,CANTIDAD,PRECIO)
+values(2,15847,6,'1600 bs')
+insert into detalleSP(COD_SOLICITUD,ID_PRODUCTO,CANTIDAD,PRECIO)
+values(3,15896,7,'1700 bs')
+insert into detalleSP(COD_SOLICITUD,ID_PRODUCTO,CANTIDAD,PRECIO)
+values(4,53695,8,'1800 bs')
+insert into detalleSP(COD_SOLICITUD,ID_PRODUCTO,CANTIDAD,PRECIO)
+values(5,84596,9,'1900 bs')
+select *
+from detalleSP
+select *
+from solicitud
+select *
+from producto
+
+
+create table cliente
+(
+ CI               integer primary key,
+ NOMBRE           varchar(30),
+ APELLIDO         varchar(30),
+ DIRECCION        varchar(50)
+)
+insert into cliente(CI,NOMBRE,APELLIDO,DIRECCION)
+values(7458968,'Pepe','Suarez','1 Anillo')
+insert into cliente(CI,NOMBRE,APELLIDO,DIRECCION)
+values(6458968,'Oscar','Rojas','2 Anillo')
+insert into cliente(CI,NOMBRE,APELLIDO,DIRECCION)
+values(5458968,'Alvaro','Paz','3 Anillo')
+insert into cliente(CI,NOMBRE,APELLIDO,DIRECCION)
+values(4458968,'Andrez','Torrez','4 Anillo')
+insert into cliente(CI,NOMBRE,APELLIDO,DIRECCION)
+values(3458968,'Juan','Miranda','5 Anillo')
+select *
+from cliente
+
+create table venta
+(
+ FECHA            varchar(50) primary key,
+ NOMB_USU         varchar(30),
+ CI_CLIENTE       integer,
+
+ foreign key(NOMB_USU)references usuario(NOMBRE),
+ foreign key(CI_CLIENTE)references cliente(CI)
+)
+insert into venta(FECHA,NOMB_USU,CI_CLIENTE)
+values('jueves ,19de agosto de 2016','juan',3458968)
+insert into venta(FECHA,NOMB_USU,CI_CLIENTE)
+values('viernes ,20de enero de 2016','jose',4458968)
+insert into venta(FECHA,NOMB_USU,CI_CLIENTE)
+values('sabado ,21de febrero de 2016','juan',5458968)
+insert into venta(FECHA,NOMB_USU,CI_CLIENTE)
+values('domingo ,22de marzo de 2016','juan',6458968)
+insert into venta(FECHA,NOMB_USU,CI_CLIENTE)
+values('lunes ,23de abril de 2016','jose',7458968)
+select *
+from venta
+
+create table detalleVP
+(
+ FECH_VENTA       varchar(50),
+ ID_PRODUCTO      integer,
+ CANTIDAD         integer,
+ PRECIO           varchar(30),
+
+ foreign key(FECH_VENTA)references venta(FECHA),
+ foreign key(ID_PRODUCTO)references producto(ID)
+)
+insert into detalleVP(FECH_VENTA,ID_PRODUCTO,CANTIDAD,PRECIO)
+values('domingo ,22de marzo de 2016',12365,10,'2000 bs')
+insert into detalleVP(FECH_VENTA,ID_PRODUCTO,CANTIDAD,PRECIO)
+values('jueves ,19de agosto de 2016',15847,11,'2100 bs')
+insert into detalleVP(FECH_VENTA,ID_PRODUCTO,CANTIDAD,PRECIO)
+values('lunes ,23de abril de 2016',15896,12,'2200 bs')
+insert into detalleVP(FECH_VENTA,ID_PRODUCTO,CANTIDAD,PRECIO)
+values('sabado ,21de febrero de 2016',53695,13,'2300 bs')
+insert into detalleVP(FECH_VENTA,ID_PRODUCTO,CANTIDAD,PRECIO)
+values('viernes ,20de enero de 2016',84596,14,'2400 bs')
+select *
+from detalleVP
+select *
+from venta
+select *
+from cliente
+select *
+from producto
+select *
+from categoria
+
+
+marcas de categoria
+Apple
+Dell
+Hewlett-Packard(HP)
+SAMSUNG
+TOSHIBA
+ACER
+Lenovo
+ASUS
+VAIO
+Sony Computer Entertainment
+LG
+Compaq
+IBM
+Systemax
