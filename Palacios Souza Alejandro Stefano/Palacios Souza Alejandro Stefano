@@ -1,0 +1,43 @@
+https://ideone.com/EteliY
+
+#include <bits/stdc++.h>
+#include <conio.h>
+using namespace std;
+int main()
+{
+    string s;
+    string letra="";
+    string respuesta = "";
+    string texto = "Dios Kira por favor responde esta pregunta:";
+    int j,cont=0;
+    string kyra="";
+    while(true){
+        kyra=getch();
+        if(kyra=="."){
+            goto a;
+        }
+        cont++;
+        if(cont > (int)texto.length()){
+            goto h;
+        }
+        cout<<kyra;
+    }
+    a:
+    for(int i = cont ; i < (int)texto.length(); ++i)
+    {
+        if(letra == ".") { cout<< texto.at(i); break; }
+        respuesta+=letra;
+        cout << texto.at(i);
+        letra = getch();
+    }
+    getline(cin,s);
+    h:
+    cin >> j;
+    cout<<endl;
+    if(respuesta==""){
+        cout << "Dios Kira responde:" << endl << endl << "\tno se encontro la fe suficiente en ti" << endl;
+        return 0;
+    }
+    cout << "Dios Kira responde: " << endl << endl <<"\t" << respuesta << endl << endl;
+    return 0;
+}
