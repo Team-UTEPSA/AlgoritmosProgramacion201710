@@ -1,0 +1,44 @@
+-----CAJA FUERTE DIGITAL-----
+Participantes: Jose Adrian Montaño Mendoza
+	       Dennis Alvarez Machuca
+Fuentes: YouTube - Humberto Higinio
+	 Foros De Arduino
+-----MATERIALES-----
+
+Hardware.- Componentes Electronicos:
+.-Placa Arduino UNO
+.-Cable De Conexion USB para el Arduino
+.-Display LCD con Interfaz I2C 2x16
+.-Cables(Jumpers) Macho-Macho, Macho-Hembra
+.-Teclado Matricial 4x4
+.-Buzzer
+.-Servomotor Comun
+.-Diodos Led(Rojo para el cerrado y Verde para el abierto)
+.-Resistencias (1x100ohm para el buzzer, 2x220ohm para los Diodos Led)
+.-Fuente Alterna De Alimentacion Para El Arduino
+.-Protoboard
+
+Software.- Aplicaciones y Recursos:
+.-Arduino IDE
+.-Librerias: LiquidCrystal_I2C, Password, Keypad, Wire, Servo
+
+-----INSTRUCCIONES-----
+Conexion Del Display LCD I2C 2x16:
+1.- Utilizar cables(jumpers) macho-hembra para conectar los pin(GND, Vcc, SDA, SCL) al Arduino
+2.- Pin GND al GND del Arduino // Aunque tambien se puede conectar a Tierra del Protoboard
+3.- Pin Vcc al 5V del Arduino // Aunque tambien se puede conectar a Positivo del Protoboard
+4.- Pin SDA al Pin A4 del Arduino // Se puede intercalar la conexion con el Protoboard
+5.- Pin SCL al Pin A5 del Arduino // Se puede intercalar la conexion con el Protoboard
+6.- En el codigo utlizar las siguientes posibles declaraciones para el Display(0x3F, 0x20, 0x27)
+
+Conexion Del Teclado Matricial 4x4:
+1.- De la parte frontal del teclado conectar de izquierda a derecha los cables(jumpers) macho-macho
+2.- Conectar los cables de la misma manera en que se ordeno(de izquierda a derecha) a los pin(9, 8, 7, 6, 5, 4, 3, 2)
+
+Conexion De Los Componentes:
+1.- Buzzer - El positivo va conectado a una resistencia de 100ohm y la resistencia va ir conectada al pin 10, el negativo al tierra del protoboard
+2.- Led Rojo - El positivo va conectado a una resistencia de 220ohm y la resistencia va ir conectada al pin 11, el negativo al tierra del protoboard
+3.- Led Verde - El positivo va conectado a una resistencia de 220ohm y la resistencia va ir conectada al pin 12, el negativo al tierra del protoboard
+4.- Servomotor - El positvo va conectado al positivo del Protoboard, el negativo a tierra y el de señal va conectado al pin 13 del Arduino
+ 
+
